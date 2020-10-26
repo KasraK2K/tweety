@@ -49880,13 +49880,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/main.css ***!
-  \************************************************************/
+/*!**************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/app.scss ./resources/css/main.css ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Learning\Laravel\tweety\resources\js\app.js */"./resources/js/app.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'D:\\Learning\\Laravel\\tweety\\resources\\scss\\app.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 module.exports = __webpack_require__(/*! D:\Learning\Laravel\tweety\resources\css\main.css */"./resources/css/main.css");
 
 

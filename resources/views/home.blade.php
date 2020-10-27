@@ -6,11 +6,11 @@
 			@include('_sidebar-links')
 		</div>
 
-		<div class="lg:flex-1 lg:mx-10" style="max-width: 700px">
+		<div class="lg:flex-1 lg:mx-10">
 			@include('_publish-tweet-panel')
 
 			<div class="border border-gray-300 rounded-lg">
-				@foreach(range(1,4) as $tweet)
+				@foreach($tweets as $tweet)
 					@include('_tweet')
 				@endforeach
 			</div>

@@ -3,7 +3,7 @@
 	@foreach(range(1, 8) as $index)
 		<li class="mb-4">
 			<div class="flex items-center">
-				<img src="https://placebeard.it/40/40" alt="" class="rounded-full mr-2">
+				<img src="{{ auth()->user()->avatar() }}" alt="" class="rounded-full mr-2">
 
 				John Doe
 			</div>

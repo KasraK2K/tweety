@@ -48,6 +48,16 @@ class User extends Authenticatable
 
     public function avatar()
     {
-        return 'https://placebeard.it/40/40';
+        return 'https://placebeard.it/40/40' /* . $this->user */;
+    }
+
+    public function follow(User $user)
+    {
+        return $this->follows()->save($user);
+    }
+
+    public function follows()
+    {
+        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
     }
 }

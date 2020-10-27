@@ -9,14 +9,14 @@
 		<div class="lg:flex-1 lg:mx-10">
 			@include('_publish-tweet-panel')
 
-			<div class="border border-gray-300 rounded-lg">
+			<div class="border border-gray-300 rounded-lg mb-12">
 				@foreach($tweets as $tweet)
 					@include('_tweet')
 				@endforeach
 			</div>
 		</div>
 
-		<div class="lg:w-1/6 bg-blue-100 rounded-lg p-4">
+		<div class="lg:w-1/6 bg-blue-100 rounded-lg p-4 h-full">
 			@include('_friends-list')
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 <ul>
 	<li>
-		<a class="font-bold text-lg mb-4 block" href="/">Home</a>
+		<a class="font-bold text-lg mb-4 block" href="{{ route('home') }}">Home</a>
 	</li>
 
 	<li>
@@ -24,7 +24,7 @@
 	</li>
 
 	<li>
-		<a class="font-bold text-lg mb-4 block" href="#">Profile</a>
+		<a class="font-bold text-lg mb-4 block" href="{{ route('profile', auth()->user()) }}">Profile</a>
 	</li>
 
 	<li>

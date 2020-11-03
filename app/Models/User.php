@@ -56,9 +56,9 @@ class User extends Authenticatable
         return $this->hasMany(Tweet::class);
     }
 
-    public function avatar()
+    public function avatar($size = '40')
     {
-        return 'https://placebeard.it/40/40' /* . $this->user */;
+        return 'https://placebeard.it/' . $size . '/' . $size /* . $this->user */;
     }
 
     public function follow(User $user)
@@ -68,6 +68,16 @@ class User extends Authenticatable
 
     public function follows()
     {
-        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
+        return $this->belongsToMany(
+            User::class,
+            'follows',
+            'user_id',
+            'following_user_id'
+        );
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'name';
     }
 }

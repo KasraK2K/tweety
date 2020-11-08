@@ -17,11 +17,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -59,14 +55,14 @@ class User extends Authenticatable
             ->latest();
     }
 
-    public function avatar($size = '40')
+    public function getAvatarAttribute($value)
     {
-        return 'https://i.pravatar.cc/' . $size . '?u=' . $this->email;
+        return asset('storage/' . $value);
     }
 
     public function path($append = '')
     {
-        $path = route('profile', $this->name);
+        $path = route('profile', $this->username);
         return $append ? "{$path}/{$append}" : $path;
     }
 }

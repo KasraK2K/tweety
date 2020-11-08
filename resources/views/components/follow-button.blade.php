@@ -1,4 +1,4 @@
-@unless (auth()->user()->is($user))
+@unless (current_user()->is($user))
 	<form action="/profiles/{{ $user->name }}/follow" method="POST">
 		@csrf
 

@@ -4,7 +4,7 @@
 			<div class="relative">
 				<img src="/images/default-profile-banner.jpg" alt="" class="rounded-lg mb-2">
 
-				<img src="{{ $user->avatar('150') }}" alt=""
+				<img src="{{ $user->avatar }}" width="150" alt="your avatar"
 				     class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2"
 				     style="left: 50%;">
 			</div>
